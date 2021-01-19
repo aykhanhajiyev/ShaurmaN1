@@ -1,0 +1,27 @@
+html {
+    scroll-behavior: smooth;
+}
+@font-face{
+    font-family: ArrusFont;
+    src: url('./fonts/Arrus.ttf');
+}
+body {
+    
+}
+.navbar-nav > li > a {
+    text-transform: capitalize !important;
+}
+.sticky-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #121619;
+}
+
+.sticky-logo {
+    position: absolute;
+    top: 0;
+    height: 100px !important;
+    transition: height 1s !important;
+}
