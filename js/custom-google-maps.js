@@ -1,8 +1,11 @@
 let map;
-function getBranchesList(){
+let markers = [];
+let infoWindows = [];
+
+function getBranchesList() {
     const branches = [
         {
-            position: new google.maps.LatLng(40.36662733,49.81770765),
+            position: new google.maps.LatLng(40.36662733, 49.81770765),
             type: "shaurma",
             title: "İçərişəhər",
             address: "Yasamal rayonu H.Cavid prospekti Ev 8, Baku, Azerbaycan"
@@ -66,6 +69,7 @@ function getBranchesList(){
 }
 function initMap() {
     const successcallback = (position) => {
+
         //get current location
         var pos = {
             lat: position.coords.latitude,
@@ -79,7 +83,9 @@ function initMap() {
         const markerCurrentUser = new google.maps.Marker({
             position: pos,
             map: map,
-            title: "Sizin hal-hazırda olduğunuz yer"
+            title: "Sizin hal-hazırda olduğunuz yer",
+            draggable: true,
+            animation: google.maps.Animation.DROP
         });
         const branches = getBranchesList()
         const iconBase = "images/";
@@ -88,14 +94,28 @@ function initMap() {
                 icon: iconBase + "shaurma_logo_map_icon.png",
             }
         }
+
         // Create markers.
         for (let i = 0; i < branches.length; i++) {
             const marker = new google.maps.Marker({
                 position: branches[i].position,
                 icon: icons[branches[i].type].icon,
+                title: "<div style = 'height:60px;width:200px'><b>Ünvan:</b><br />" + branches[i].address,
                 map: map,
-                title: icons[branches[i].title]
+                draggable: true,
+                animation: google.maps.Animation.DROP
             });
+            google.maps.event.addListener(marker, "click", function (e) {
+                var infoWindow = new google.maps.InfoWindow();
+                infoWindow.setContent(marker.title);
+                infoWindow.open(map, marker);
+                const previousInfoWindow = infoWindows.pop()
+                if (previousInfoWindow) {
+                    previousInfoWindow.close()
+                }
+                infoWindows.push(infoWindow)
+            });
+            markers.push(marker);
         }
     }
     const errorcallback = (error) => {
@@ -107,12 +127,12 @@ function initMap() {
 
 function setAddressList() {
     const branches = getBranchesList()
-    for(let i=0;i<branches.length;i++) {
-        createDivContent(branches[i].address)
+    for (let i = 0; i < branches.length; i++) {
+        createDivContent(branches[i], i)
     }
 
 }
-function createDivContent(addressName){
+function createDivContent(branch, index) {
     let mainContent = document.getElementById("address-list")
     let colDiv = document.createElement('div');
     colDiv.classList.add('col-xl-6')
@@ -131,8 +151,29 @@ function createDivContent(addressName){
     let addressLink = document.createElement('a')
     addressLink.setAttribute('href', "#")
     addressLink.classList.add('iteam-name')
+    //Fill content
+    addressLink.innerHTML = branch.address
+    // addressLink.setAttribute('data-title', branch.title)
+    addressLink.setAttribute('data-index', index)
+    //create addEventListener
 
-    addressLink.innerHTML = addressName
+    //Trigger
+    const homeTab = document.getElementById("home-tab");
+    addressLink.addEventListener('click', function (e) {
+        e.preventDefault()
+        homeTab.click()
+        const selectedMarker = markers[index];
+        console.dir(selectedMarker)
+        var infoWindow = new google.maps.InfoWindow();
+        infoWindow.setContent(selectedMarker.title);
+        infoWindow.open(map, selectedMarker);
+        const previousInfoWindow = infoWindows.pop()
+        if (previousInfoWindow) {
+            previousInfoWindow.close()
+        }
+        infoWindows.push(infoWindow)
+    })
+
 
     itemNameList.appendChild(addressLink)
     menuDetail.appendChild(itemNameList)

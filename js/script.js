@@ -241,3 +241,7 @@ $(function() {
             responsive_dropdown ();
         });
 });
+
+function showLangContent(){
+    $("#lang-content").toggle('d-none')
+}
