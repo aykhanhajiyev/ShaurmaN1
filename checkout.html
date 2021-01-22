@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from themes.templatescoder.com/pizzon/html/demo/1-0/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Jan 2021 22:36:34 GMT -->
-
 <head>
 	<title>Pizzon</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,78 +23,82 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-142494086-2');
-    </script> -->
+	</script> -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvZ7ogoaQcJ8n8RdgECMeFCS7zMN1MpVE&callback=initMap&libraries=&v=weekly"
+		defer></script>
 </head>
 
 <body>
 
-		<!-- Start preloader -->
-		<div id="preloader">
-			<label>Yüklənir...</label>
-		</div>
-		<!-- End preloader -->
-	
-		<header id="header">
-			<div class="container">
-				<div class="row m-0">
-					<div class="col-xl-3 col-lg-2 col-md-4 col-3 p-0">
-						<div class="navbar-header">
-							<a class="navbar-brand page-scroll" href="#">
-								<img alt="pizzon" src="images/shaurma1.png">
-							</a>
-						</div>
+	<!-- Start preloader -->
+	<div id="preloader">
+		<label>Yüklənir...</label>
+	</div>
+	<!-- End preloader -->
+
+	<header id="header">
+		<div class="container">
+			<div class="row m-0">
+				<div class="col-xl-3 col-lg-2 col-md-4 col-3 p-0">
+					<div class="navbar-header">
+						<a class="navbar-brand page-scroll" href="#">
+							<img alt="pizzon" src="images/shaurma1.png">
+						</a>
 					</div>
-					<div class="col-xl-9 col-lg-10 col-md-8 col-9 p-0 text-right">
-						<div id="menu" class="navbar-collapse collapse">
-							<ul class="nav navbar-nav">
-								<li class="level">
-									<a href="index.html" class="page-scroll">Əsas Səhifə</a>
-								</li>
-								<li class="level">
-									<a href="index.html#about" class="page-scroll">Haqqımızda</a>
-								</li>
-								<li class="level">
-									<a href="index.html#ourmenu" class="page-scroll">Menyu</a>
-								</li>
-								<li class="level">
-									<a href="index.html#restaurant" class="page-scroll">Restoranlar</a>
-								</li>
-								<li class="level">
-									<a href="#contact" class="page-scroll">Əlaqə</a>
-								</li>
-							</ul>
-						</div>
-						<div class=" header-right-link">
-							<ul>
-								<li class="call-icon">
-									<a href="#">
-										<span class="icon"></span>
-										<div class="link-text">*1110</div>
-									</a>
-								</li>
-								<li class="cart-icon my-cart-icon">
-									<a href="#">
-										<span class="icon"></span>
-										<div class="link-text"><span class="my-cart-badge">2</span> məhsul -
-											<span class="my-cart-total-price">0.00</span>
-										</div>
-									</a>
-								</li>
-								<li class="order-online level-set">
-									<a href="http://themes.templatescoder.com/pizzon/html/demo/1-0/shop-categories.html"
-										class="btn btn-green">AZ</a>
-								</li>
-								<li class="side-toggle">
-									<button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle"
-										type="button"><span></span></button>
-								</li>
-							</ul>
-						</div>
+				</div>
+				<div class="col-xl-9 col-lg-10 col-md-8 col-9 p-0 text-right">
+					<div id="menu" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li class="level">
+								<a href="index.html" class="page-scroll">Əsas Səhifə</a>
+							</li>
+							<li class="level">
+								<a href="index.html#about" class="page-scroll">Haqqımızda</a>
+							</li>
+							<li class="level">
+								<a href="index.html#ourmenu" class="page-scroll">Menyu</a>
+							</li>
+							<li class="level">
+								<a href="index.html#restaurant" class="page-scroll">Restoranlar</a>
+							</li>
+							<li class="level">
+								<a href="#contact" class="page-scroll">Əlaqə</a>
+							</li>
+						</ul>
+					</div>
+					<div class=" header-right-link">
+						<ul>
+							<li class="call-icon">
+								<a href="#">
+									<span class="icon"></span>
+									<div class="link-text">*1110</div>
+								</a>
+							</li>
+							<li class="cart-icon my-cart-icon">
+								<a href="#">
+									<span class="icon"></span>
+									<div class="link-text"><span class="my-cart-badge">2</span> məhsul -
+										<span class="my-cart-total-price">0.00</span>
+									</div>
+								</a>
+							</li>
+							<li class="order-online level-set">
+								<a href="http://themes.templatescoder.com/pizzon/html/demo/1-0/shop-categories.html"
+									class="btn btn-green">AZ</a>
+							</li>
+							<li class="side-toggle">
+								<button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle"
+									type="button"><span></span></button>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
-		</header>
-	
+		</div>
+	</header>
+
 
 
 	<section class="page-banner" style="background: #121619 url(images/blog-1.jpg) no-repeat center / cover;">
@@ -166,11 +168,8 @@
 							</div>
 							<div class="row">
 								<div class="col-12">
-									<h4>Çatdırılma ünvanını xəritədən seçin</h4>
-									<iframe width="600" height="450" frameborder="0" style="border:0" src=""
-										allowfullscreen id="map">
-									</iframe>
-									<!-- <div id="map" style="width: 100%;height:400px;"></div> -->
+									<h4>Çatdırılma ünvanını xəritədən seçin : <span id="distance-message"></span></h4>
+									<div id="map" style="width: 100%;height:400px;"></div>
 
 								</div>
 								<div class="col-12">
@@ -352,7 +351,147 @@
 	<script src="js/modernizr.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/header.js"></script>
-	<script src="js/custom-mycart.js"></script>
+
+	<script>
+		let map;
+		var distances = []
+		function initMap() {
+			const successCallback = (position) => {
+				map = new google.maps.Map(document.getElementById('map'), {
+					center: { lat: position.coords.latitude, lng: position.coords.longitude },
+					zoom: 14
+				});
+
+				const marker = new google.maps.Marker({
+					position: { lat: position.coords.latitude, lng: position.coords.longitude },
+					map: map,
+					draggable: true
+				})
+				getDistance(position.coords.latitude, position.coords.longitude);
+				window.google.maps.event.addListener(marker, 'dragend', (e) => {
+					const position = marker.getPosition()
+					let lat = position.lat()
+					let lang = position.lng()
+					getDistance(lat, lang);
+				});
+
+
+			}
+
+			const errorCallback = (error) => {
+				console.log(error)
+			}
+			navigator.geolocation.getCurrentPosition(successCallback, errorCallback)
+		}
+
+		function getBranchesList() {
+			const branches = [
+				{
+					position: new google.maps.LatLng(40.36662733, 49.81770765),
+					type: "shaurma",
+					title: "İçərişəhər",
+					address: "Yasamal rayonu H.Cavid prospekti Ev 8, Baku, Azerbaycan"
+				},
+				{
+					position: new google.maps.LatLng(40.3752739032787, 49.8398113622537),
+					type: "shaurma",
+					title: "Sahil",
+					address: "Nəsimi rayonu Nizami 81, Baku, Azerbaycan"
+				},
+				{
+					position: new google.maps.LatLng(40.3747814016861, 49.8320364832672),
+					type: "shaurma",
+					title: "MUM",
+					address: "Yasamal ray, ev 35 Azərbaycan Prospekti, Bakı 1009, Azerbaycan"
+				},
+				{
+					position: new google.maps.LatLng(40.3796573391879, 49.8790930320365),
+					type: "shaurma",
+					title: "Xətai",
+					address: "Xətai rayonu, Nobel prospekti, Amay ticarət Mərkəzi, Bakı, Azerbaycan"
+				},
+				{
+					position: new google.maps.LatLng(40.3904641943087, 49.8377689854004),
+					type: "shaurma",
+					title: "Türkiyə səfirliyi",
+					address: "Rəşid Behbudov və Abbasqulubəy Bakıxanov küçəsinin kəsişməsi, Bakı, Azerbaycan"
+				},
+				{
+					position: new google.maps.LatLng(40.39578248, 49.8187936226839),
+					type: "shaurma",
+					title: "Moskva prospekti",
+					address: "Moskva prospekti ev. 1058 meh., Nasimi, Baku 1000, Azerbaycan"
+				},
+				{
+					position: new google.maps.LatLng(40.407344930687, 49.8357718661738),
+					type: "shaurma",
+					title: "Cıdır Düzü",
+					address: "ev 146 Azadliq Ave, Baku, Azerbaycan"
+				},
+				{
+					position: new google.maps.LatLng(40.4100263213656, 49.8138182964601),
+					type: "shaurma",
+					title: "Əcəmi",
+					address: "Cavadxan küç. 3005-ci məhəllə, Memar Əcəmi, Bakı 1003, Azerbaycan"
+				},
+				{
+					position: new google.maps.LatLng(40.3572921492299, 49.956804944452),
+					type: "shaurma",
+					title: "Zığ",
+					address: "Zigh Highway, Baku, Azerbaycan"
+				},
+				{
+					position: new google.maps.LatLng(40.4938701598963, 50.1319897923638),
+					type: "shaurma",
+					title: "Airport",
+					address: "Zigh-Airport Hwy, Baku, Azerbaycan"
+				},
+			]
+			return branches
+		}
+		function getDistance(lat, lang) {
+			//Just for example
+			distances = []
+			var origin = new google.maps.LatLng(lat, lang);
+			var branches = getBranchesList()
+			for (let i = 0; i < branches.length; i++) {
+				var service = new google.maps.DistanceMatrixService();
+				service.getDistanceMatrix({
+					origins: [origin],
+					destinations: [branches[i].position],
+					travelMode: google.maps.TravelMode.DRIVING,
+					unitSystem: google.maps.UnitSystem.METRIC
+				}, callback);
+			}
+
+
+			function callback(response, status) {
+				if (status != google.maps.DistanceMatrixStatus.OK) {
+					console.log(err)
+				}
+				else {
+					var origin = response.originAddresses[0];
+					var destination = response.destinationAddresses[0]
+					if (response.rows[0].elements[0].status === "ZERO_RESULTS") {
+						console.log("ZERO RESULT, burdan yol yoxdu")
+					}
+					else {
+						var distance = response.rows[0].elements[0].distance;
+						var duration = response.rows[0].elements[0].duration;
+						//console.log(response.rows[0].elements[0].distance);
+						var distance_in_kilo = distance.value / 1000;
+						var duration_text = duration.text;
+						//console.log(distance_in_kilo, " km");
+						distances.push(distance_in_kilo)
+						//console.log(duration_text, " saat")
+						//console.log(Math.min(distances), "Minimum value")
+						$("#distance-message").html("Sizə ən yaxın olan filialımız: <b>" + Math.min(...distances).toFixed(2) + " km </b> uzaqlıqdadır")
+					}
+				}
+			}
+			//end of example
+		}
+	</script>
 </body>
 
 </html>
